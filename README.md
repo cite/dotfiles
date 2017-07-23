@@ -54,4 +54,6 @@ dot checkout # this time with hooks
 Don't push any (dot)files containing passwords or any other data you don't want
 to share to github - they will be world readable there.
 
+You will probably also avoid to run `dot clean`.
+
 Good luck and have fun.
