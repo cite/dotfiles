@@ -5,7 +5,8 @@
 This little snippet will help you keeping track of your dotfiles as a bare git
 repository. It utilizes
 [setgitperms.pl](https://github.com/git/git/blob/master/contrib/hooks/setgitperms.perl)
-from git's contrib directory to manage permissions.
+from git's contrib directory to manage permissions. Since I wasn't sure about
+it's license, I didn't include it here - you'll have to download it yourself.
 
 It was inspired by a [Atlassian developer blog entry](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/).
 
@@ -16,6 +17,16 @@ It was inspired by a [Atlassian developer blog entry](https://developer.atlassia
 2. Either add `setgitperms.perl` to `.dothooks` (or simply reference it by path
    if you are sure that it will be at the same location on all your machines).
    Make sure that it's executable! Don't forget to commit and push after this :-)
+
+```
+tmp=$(mktemp -d) ; cd $tmp
+git clone $REPO && cd .dotfiles
+wget -P .dothooks https://raw.githubusercontent.com/git/git/master/contrib/hooks/setgitperms.perl
+chmod 755 .dothooks/setgitperms.perl
+git add . && git commit -m 'added setgitperms.pl' && git push
+cd $HOME && rm -rf $tmp
+```
+
 3. Clone the modified repository to `~/.dotfiles` as a bare copy and protect it
    from access:
 
