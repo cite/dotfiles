@@ -1,0 +1,6 @@
+.dothooks  mode=0755  uid=1000  gid=1000
+.dothooks/post-checkout  mode=0755  uid=1000  gid=1000
+.dothooks/post-merge  mode=0755  uid=1000  gid=1000
+.dothooks/pre-commit  mode=0755  uid=1000  gid=1000
+.gitignore  mode=0644  uid=1000  gid=1000
+README.md  mode=0644  uid=1000  gid=1000

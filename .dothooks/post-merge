@@ -1,0 +1,3 @@
+#!/bin/sh
+SUBDIRECTORY_OK=1 . git-sh-setup
+$(git config core.hooksPath)/setgitperms.perl -w
