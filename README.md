@@ -36,4 +36,9 @@ dot checkout # this time with hooks
    dotfiles like any other git repository, only while typing `dot` instead of
    `git`.
 
+## Caveats
+
+Don't push any (dot)files containing passwords or any other data you don't want
+to share to github - they will be world readable there.
+
 Good luck and have fun.
